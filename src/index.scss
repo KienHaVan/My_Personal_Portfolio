@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-black text-white px-5;
+    font-family: "Poppins", sans-serif;
+  }
+}
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-primary {
+    @apply py-4 px-6 flex items-center justify-center gap-2 w-[200px] cursor-pointer bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+  .banner-social-laptop {
+    @apply flex-row -bottom-16 left-auto;
+  }
+  .banner-social-tablet {
+    @apply flex-row -bottom-16 left-auto;
+  }
+  .about-mobile {
+    @apply flex-col gap-4;
+  }
+}
