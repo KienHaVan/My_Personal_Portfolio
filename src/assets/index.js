@@ -20,4 +20,8 @@ export const Images = {
   DOWN: require("./icons/down.png"),
   WORK: require("./icons/work.png"),
   EDUCATION: require("./icons/education.png"),
+  WORK_CHOOSE: require("./icons/work_choose.png"),
+  EDUCATION_CHOOSE: require("./icons/education_choose.png"),
+  CALENDER: require("./icons/calender.png"),
+  QUALIFICATION: require("./icons/qualification.png"),
 };

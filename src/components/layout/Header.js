@@ -24,13 +24,13 @@ const list = [
   {
     id: 4,
     link: "#qualification",
-    icon: Images.PROJECT,
+    icon: Images.QUALIFICATION,
     name: "Qualification",
   },
   {
     id: 5,
     link: "/",
-    icon: Images.PORTFOLIO,
+    icon: Images.PROJECT,
     name: "Projects",
   },
   {

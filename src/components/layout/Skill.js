@@ -60,12 +60,12 @@ function Skill() {
   const [skillSelected, setSkillSelected] = useState("frontend");
   return (
     <div
-      className="pt-[100px] flex flex-col justify-center items-center px-[160px]"
+      className="pt-[100px] flex flex-col justify-center items-center px-[160px] laptop:px-24 tablet:px-12 mobile:px-0"
       id="skills"
     >
       <h1 className="text-5xl mb-2">Skills</h1>
       <h2 className="text-xl mb-8 mobile:mb-6">My technical level</h2>
-      <div className="w-full grid grid-cols-2 gap-8">
+      <div className="w-full grid grid-cols-2 gap-8 tablet:grid-cols-1 mobile:grid-cols-1">
         <div>
           <SkillSection onClick={() => setSkillSelected("frontend")} />
           {skillSelected === "frontend" && (

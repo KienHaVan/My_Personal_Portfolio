@@ -17,7 +17,7 @@ function About() {
   };
   return (
     <div
-      className="pt-[96px] flex flex-col justify-center items-center laptop:pt-[132px] tablet:pt-[132px]"
+      className="pt-[96px] flex flex-col justify-center items-center laptop:pt-[132px] tablet:pt-[132px] mobile:pt-20"
       id="about"
     >
       <h1 className="text-5xl mb-2">About Me</h1>
@@ -27,6 +27,7 @@ function About() {
           <img
             src={Images.AVATAR}
             className="rounded-full w-[300px] flex-shrink-0 mobile:w-[240px]"
+            alt=""
           />
         </div>
         <div className="w-[500px] flex flex-col gap-4 tablet:w-auto  mobile:w-auto mobile:items-center">
@@ -35,7 +36,7 @@ function About() {
             experience, working in web/mobile technologies and UI/UX design,
             delivery quality work.
           </h2>
-          <div className="flex items-center justify-between my-6 mobile:w-full">
+          <div className="flex items-center justify-between my-6 mobile:w-full mobile:my-3">
             <AboutSection />
             <AboutSection figure="20+" content="Completed projects" />
             <AboutSection figure="05+" content="Companies worked" />
