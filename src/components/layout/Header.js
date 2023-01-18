@@ -45,7 +45,7 @@ export default function Header({ list }) {
         isOpen={modalOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
-        className="absolute top-0 left-0 bottom-0 right-0 transition-all"
+        className="absolute top-0 left-0 bottom-0 right-0 transition-all z-20"
       >
         <div className="bg-black absolute bottom-0 left-0 right-0 rounded-t-2xl">
           <div className="grid grid-cols-3">
