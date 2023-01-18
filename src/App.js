@@ -59,12 +59,12 @@ function App() {
     <>
       <Header list={list} />
       <div className="page-container">
-        <Banner section={list[0].ref} />
-        <About section={list[1].ref} />
-        <Skill section={list[2].ref} />
-        <Qualification section={list[3].ref} />
-        <Project section={list[4].ref} />
-        <Contact section={list[5].ref} />
+        <Banner section={list[0]} />
+        <About section={list[1]} />
+        <Skill section={list[2]} />
+        <Qualification section={list[3]} />
+        <Project section={list[4]} />
+        <Contact section={list[5]} />
       </div>
       <Footer />
     </>

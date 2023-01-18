@@ -26,6 +26,7 @@ export const social = [
 ];
 
 function Banner({ section }) {
+  console.log("🚀 ~ file: Banner.js:29 ~ Banner ~ section", section);
   return (
     <div
       className="pt-[132px] flex mobile:flex-col-reverse justify-center items-center relative tablet:mt-12 gap-6 mobile:pt-[96px]"
