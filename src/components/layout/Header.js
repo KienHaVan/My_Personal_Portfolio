@@ -35,7 +35,7 @@ const list = [
   },
   {
     id: 6,
-    link: "/",
+    link: "#contact",
     icon: Images.SEND,
     name: "Contact",
   },

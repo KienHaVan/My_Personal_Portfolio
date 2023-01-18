@@ -2,7 +2,7 @@ import React from "react";
 import { Images } from "../../assets";
 import Button from "../button/Button";
 
-const social = [
+export const social = [
   {
     id: 1,
     link: "https://www.facebook.com/kien.van321",

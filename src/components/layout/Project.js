@@ -13,7 +13,7 @@ function Project() {
     >
       <h1 className="text-5xl mb-2">Projects</h1>
       <h2 className="text-xl mb-8 mobile:mb-6">My outstanding work</h2>
-      <div className="w-[600px] rounded-xl shadow-md shadow-gray-800 mobile:w-full">
+      <div className="w-[600px] rounded-xl shadow-md shadow-gray-800 mobile:w-full z-0">
         <Swiper
           slidesPerView={1}
           navigation={true}
