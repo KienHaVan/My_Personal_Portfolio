@@ -44,6 +44,7 @@ function Banner() {
         <img
           src={Images.AVATAR}
           className="rounded-full w-[400px] flex-shrink-0 mobile:w-[240px]"
+          alt=""
         />
       </div>
       <div className="absolute left-0 flex flex-col gap-4 laptop:banner-social-laptop tablet:banner-social-tablet mobile:top-[212px] mobile:-translate-y-[50%] ">
@@ -52,6 +53,7 @@ function Banner() {
             <img
               src={item.image}
               className="w-8 hover:scale-150 transition-all"
+              alt=""
             />
           </a>
         ))}

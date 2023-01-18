@@ -9,7 +9,7 @@ function Button({
   return (
     <div className="btn-primary" onClick={onClick}>
       <p>{title}</p>
-      <img src={icon} className="w-[24px] h-[24px]" />
+      <img src={icon} className="w-[24px] h-[24px]" alt="" />
     </div>
   );
 }

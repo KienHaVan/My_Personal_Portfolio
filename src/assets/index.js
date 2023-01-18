@@ -24,4 +24,5 @@ export const Images = {
   EDUCATION_CHOOSE: require("./icons/education_choose.png"),
   CALENDER: require("./icons/calender.png"),
   QUALIFICATION: require("./icons/qualification.png"),
+  SHOW: require("./icons/show.png"),
 };

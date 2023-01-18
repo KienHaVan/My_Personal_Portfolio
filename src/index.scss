@@ -17,6 +17,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   .btn-primary {
     @apply py-4 px-6 flex items-center justify-center gap-2 w-[200px] cursor-pointer bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
   }
@@ -28,5 +34,16 @@
   }
   .about-mobile {
     @apply flex-col gap-4;
+  }
+  .swiper .swiper-button-next,
+  .swiper .swiper-button-prev {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+  }
+  .swiper .swiper-button-next::after,
+  .swiper .swiper-button-prev::after {
+    font-size: unset;
   }
 }

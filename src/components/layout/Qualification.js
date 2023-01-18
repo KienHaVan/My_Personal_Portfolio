@@ -53,7 +53,7 @@ function Qualification() {
   const [select, setSelect] = useState("education");
   return (
     <div
-      className="pt-[100px] flex flex-col justify-center items-center px-[160px] mb-20 mobile:px-0"
+      className="pt-[100px] flex flex-col justify-center items-center px-[160px] mobile:px-0"
       id="qualification"
     >
       <h1 className="text-5xl mb-2">Qualification</h1>

@@ -4,6 +4,8 @@ import Banner from "./components/layout/Banner";
 import Header from "./components/layout/Header";
 import Skill from "./components/layout/Skill";
 import Qualification from "./components/layout/Qualification";
+import Project from "./components/layout/Project";
+import Contact from "./components/layout/Contact";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <About />
         <Skill />
         <Qualification />
+        <Project />
+        <Contact />
       </div>
     </>
   );
