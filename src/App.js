@@ -6,6 +6,7 @@ import Skill from "./components/layout/Skill";
 import Qualification from "./components/layout/Qualification";
 import Project from "./components/layout/Project";
 import Contact from "./components/layout/Contact";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Project />
         <Contact />
       </div>
+      <Footer />
     </>
   );
 }
