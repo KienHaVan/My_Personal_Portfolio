@@ -37,6 +37,9 @@ function Contact({ section }) {
           </div>
         </div>
         <form className="w-[50%] mobile:w-full">
+          <h1 className="text-2xl font-bold mb-4 invisible mobile:visible">
+            Leave me a message
+          </h1>
           <div className="flex justify-between items-center gap-4 mb-4 tablet:flex-col mobile:flex-col">
             <div className="w-full">
               <label htmlFor="name">Your name</label>
