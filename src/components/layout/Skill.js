@@ -56,12 +56,13 @@ const skillList = {
   ],
 };
 
-function Skill() {
+function Skill({ section }) {
   const [skillSelected, setSkillSelected] = useState("frontend");
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[160px] laptop:px-24 tablet:px-12 mobile:px-0"
       id="skills"
+      ref={section.ref}
     >
       <h1 className="text-5xl mb-2">Skills</h1>
       <h2 className="text-xl mb-8 mobile:mb-6">My technical level</h2>

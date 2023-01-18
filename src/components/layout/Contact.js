@@ -2,11 +2,12 @@ import React from "react";
 import { Images } from "../../assets";
 import { social } from "./Banner";
 
-function Contact() {
+function Contact({ section }) {
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[80px] mb-20 tablet:px-0 mobile:px-0"
       id="contact"
+      ref={section.ref}
     >
       <h1 className="text-5xl mb-2">Contact</h1>
       <h2 className="text-xl mb-12 mobile:mb-6">Contact me directly</h2>
@@ -38,7 +39,7 @@ function Contact() {
         <form className="w-[50%] mobile:w-full">
           <div className="flex justify-between items-center gap-4 mb-4 tablet:flex-col mobile:flex-col">
             <div className="w-full">
-              <label for="name">Your name</label>
+              <label htmlFor="name">Your name</label>
               <input
                 type="text"
                 id="name"
@@ -47,7 +48,7 @@ function Contact() {
               />
             </div>
             <div className="w-full">
-              <label for="phone">Phone number</label>
+              <label htmlFor="phone">Phone number</label>
               <input
                 type="text"
                 id="phone"
@@ -57,7 +58,7 @@ function Contact() {
             </div>
           </div>
           <div className="mb-4">
-            <label for="mail">Your email</label>
+            <label htmlFor="mail">Your email</label>
             <input
               type="text"
               id="mail"
@@ -66,7 +67,7 @@ function Contact() {
             />
           </div>
           <div className="mb-4">
-            <label for="subject">Your subject</label>
+            <label htmlFor="subject">Your subject</label>
             <input
               type="text"
               id="subject"
@@ -75,7 +76,7 @@ function Contact() {
             />
           </div>
           <div className="mb-4">
-            <label for="message">Your message</label>
+            <label htmlFor="message">Your message</label>
             <textarea
               type="text"
               id="message"

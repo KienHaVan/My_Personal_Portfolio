@@ -5,11 +5,12 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-function Project() {
+function Project({ section }) {
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[160px] mobile:px-0"
       id="project"
+      ref={section.ref}
     >
       <h1 className="text-5xl mb-2">Projects</h1>
       <h2 className="text-xl mb-8 mobile:mb-6">My outstanding work</h2>

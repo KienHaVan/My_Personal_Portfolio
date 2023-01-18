@@ -7,20 +7,64 @@ import Qualification from "./components/layout/Qualification";
 import Project from "./components/layout/Project";
 import Contact from "./components/layout/Contact";
 import Footer from "./components/layout/Footer";
+import { Images } from "./assets";
+
+const list = [
+  {
+    id: 1,
+    link: "#home",
+    icon: Images.HOME,
+    name: "Home",
+    ref: React.createRef(),
+  },
+  {
+    id: 2,
+    link: "#about",
+    icon: Images.ABOUT,
+    name: "About",
+    ref: React.createRef(),
+  },
+  {
+    id: 3,
+    link: "#skills",
+    icon: Images.SKILLS,
+    name: "Skills",
+    ref: React.createRef(),
+  },
+  {
+    id: 4,
+    link: "#qualification",
+    icon: Images.QUALIFICATION,
+    name: "Qualification",
+    ref: React.createRef(),
+  },
+  {
+    id: 5,
+    link: "#project",
+    icon: Images.PROJECT,
+    name: "Projects",
+    ref: React.createRef(),
+  },
+  {
+    id: 6,
+    link: "#contact",
+    icon: Images.SEND,
+    name: "Contact",
+    ref: React.createRef(),
+  },
+];
 
 function App() {
-  const aboutRef = useRef(null);
-  const executeScroll = () => aboutRef.current.scrollIntoView();
   return (
     <>
-      <Header aboutScroll={executeScroll} />
+      <Header list={list} />
       <div className="page-container">
-        <Banner />
-        <About ref={aboutRef} />
-        <Skill />
-        <Qualification />
-        <Project />
-        <Contact />
+        <Banner section={list[0].ref} />
+        <About section={list[1].ref} />
+        <Skill section={list[2].ref} />
+        <Qualification section={list[3].ref} />
+        <Project section={list[4].ref} />
+        <Contact section={list[5].ref} />
       </div>
       <Footer />
     </>

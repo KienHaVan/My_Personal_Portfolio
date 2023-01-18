@@ -49,12 +49,13 @@ const workList = [
   },
 ];
 
-function Qualification() {
+function Qualification({ section }) {
   const [select, setSelect] = useState("education");
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[160px] mobile:px-0"
       id="qualification"
+      ref={section.ref}
     >
       <h1 className="text-5xl mb-2">Qualification</h1>
       <h2 className="text-xl mb-8 mobile:mb-6">My personal journey</h2>
@@ -92,9 +93,13 @@ function Qualification() {
       </div>
       <div className="flex flex-col items-start w-[400px] mt-10 mobile:w-full">
         {select === "education" &&
-          educationList.map((item) => <QualificationItem item={item} />)}
+          educationList.map((item) => (
+            <QualificationItem item={item} key={item.id} />
+          ))}
         {select === "work" &&
-          workList.map((item) => <QualificationItem item={item} />)}
+          workList.map((item) => (
+            <QualificationItem item={item} key={item.id} />
+          ))}
       </div>
     </div>
   );

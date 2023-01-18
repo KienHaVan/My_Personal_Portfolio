@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Images } from "../../assets";
 import AboutSection from "../About/AboutSection";
 import Button from "../button/Button";
 
-function About({ ref }) {
+function About({ section }) {
   const onButtonClick = () => {
     fetch("Kevin_SoftwareDeveloper.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -17,9 +17,9 @@ function About({ ref }) {
   };
   return (
     <div
-      ref={ref}
       className="pt-[96px] flex flex-col justify-center items-center laptop:pt-[132px] tablet:pt-[132px] mobile:pt-20"
       id="about"
+      ref={section.ref}
     >
       <h1 className="text-5xl mb-2">About Me</h1>
       <h2 className="text-xl mb-12 mobile:mb-6">My Introduction</h2>

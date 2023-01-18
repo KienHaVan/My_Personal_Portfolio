@@ -2,52 +2,22 @@ import React, { useState } from "react";
 import { Images } from "../../assets";
 import Modal from "react-modal";
 
-const list = [
-  {
-    id: 1,
-    link: "#home",
-    icon: Images.HOME,
-    name: "Home",
-  },
-  {
-    id: 2,
-    link: "#about",
-    icon: Images.ABOUT,
-    name: "About",
-  },
-  {
-    id: 3,
-    link: "#skills",
-    icon: Images.SKILLS,
-    name: "Skills",
-  },
-  {
-    id: 4,
-    link: "#qualification",
-    icon: Images.QUALIFICATION,
-    name: "Qualification",
-  },
-  {
-    id: 5,
-    link: "#project",
-    icon: Images.PROJECT,
-    name: "Projects",
-  },
-  {
-    id: 6,
-    link: "#contact",
-    icon: Images.SEND,
-    name: "Contact",
-  },
-];
-
-export default function Header({ aboutScroll }) {
+export default function Header({ list }) {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
   };
   const closeModal = () => {
     setModalOpen(false);
+  };
+  const handleNavigate = (section) => {
+    let el = section.ref.current;
+
+    window.scrollTo({
+      behavior: "smooth",
+      left: 0,
+      top: el.offsetTop,
+    });
   };
   return (
     <div className="desktop:page-container desktop:px-0 py-5 px-4 w-full flex justify-between items-center fixed top-0 left-0 right-0 z-10 bg-black ">
@@ -56,7 +26,11 @@ export default function Header({ aboutScroll }) {
       </div>
       <div className="flex items-center gap-10 mobile:hidden">
         {list.map((item) => (
-          <button id={item.id} onClick={aboutScroll}>
+          <button
+            id={item.id}
+            key={item.id}
+            onClick={() => handleNavigate(item)}
+          >
             <a href={item.link}>{item.name}</a>
           </button>
         ))}
@@ -80,6 +54,7 @@ export default function Header({ aboutScroll }) {
                 id={item.id}
                 className="px-4 py-6 flex flex-col items-center gap-1 justify-center"
                 onClick={closeModal}
+                key={item.id}
               >
                 <img src={item.icon} className="w-8 h-8" alt="" />
                 <a href={item.link}>{item.name}</a>

@@ -25,11 +25,12 @@ export const social = [
   },
 ];
 
-function Banner() {
+function Banner({ section }) {
   return (
     <div
       className="pt-[132px] flex mobile:flex-col-reverse justify-center items-center relative tablet:mt-12 gap-6 mobile:pt-[96px]"
       id="home"
+      ref={section.ref}
     >
       <div className="w-[500px] mobile:w-auto flex flex-col gap-4">
         <h1 className="text-5xl font-bold">Hi, I'm Kevin</h1>
