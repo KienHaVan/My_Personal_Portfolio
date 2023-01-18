@@ -41,7 +41,7 @@ const list = [
   },
 ];
 
-export default function Header() {
+export default function Header({ aboutScroll }) {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
@@ -56,7 +56,7 @@ export default function Header() {
       </div>
       <div className="flex items-center gap-10 mobile:hidden">
         {list.map((item) => (
-          <button id={item.id}>
+          <button id={item.id} onClick={aboutScroll}>
             <a href={item.link}>{item.name}</a>
           </button>
         ))}

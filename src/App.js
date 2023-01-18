@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import About from "./components/layout/About";
 import Banner from "./components/layout/Banner";
 import Header from "./components/layout/Header";
@@ -9,18 +9,16 @@ import Contact from "./components/layout/Contact";
 import Footer from "./components/layout/Footer";
 
 function App() {
+  const aboutRef = useRef(null);
+  const executeScroll = () => aboutRef.current.scrollIntoView();
   return (
     <>
-      <Header />
+      <Header aboutScroll={executeScroll} />
       <div className="page-container">
-        <div id="#banner">
-          <Banner />
-        </div>
-        <About />
+        <Banner />
+        <About ref={aboutRef} />
         <Skill />
-        <div id="qualification">
-          <Qualification />
-        </div>
+        <Qualification />
         <Project />
         <Contact />
       </div>

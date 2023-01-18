@@ -3,7 +3,7 @@ import { Images } from "../../assets";
 import AboutSection from "../About/AboutSection";
 import Button from "../button/Button";
 
-function About() {
+function About({ ref }) {
   const onButtonClick = () => {
     fetch("Kevin_SoftwareDeveloper.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -17,6 +17,7 @@ function About() {
   };
   return (
     <div
+      ref={ref}
       className="pt-[96px] flex flex-col justify-center items-center laptop:pt-[132px] tablet:pt-[132px] mobile:pt-20"
       id="about"
     >
