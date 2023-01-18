@@ -7,6 +7,7 @@ import Qualification from "./components/layout/Qualification";
 import Project from "./components/layout/Project";
 import Contact from "./components/layout/Contact";
 import Footer from "./components/layout/Footer";
+import Snowfall from "react-snowfall";
 import { Images } from "./assets";
 
 const list = [
@@ -56,7 +57,8 @@ const list = [
 
 function App() {
   return (
-    <>
+    <div className="app">
+      <Snowfall color="#fff" snowflakeCount={500} />
       <Header list={list} />
       <div className="page-container">
         <Banner section={list[0]} />
@@ -67,7 +69,7 @@ function App() {
         <Contact section={list[5]} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
