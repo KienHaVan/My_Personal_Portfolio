@@ -13,10 +13,14 @@ function App() {
     <>
       <Header />
       <div className="page-container">
-        <Banner />
+        <div id="#banner">
+          <Banner />
+        </div>
         <About />
         <Skill />
-        <Qualification />
+        <div id="qualification">
+          <Qualification />
+        </div>
         <Project />
         <Contact />
       </div>
