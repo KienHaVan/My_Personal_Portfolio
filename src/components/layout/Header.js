@@ -26,12 +26,8 @@ export default function Header({ list }) {
       </div>
       <div className="flex items-center gap-10 mobile:hidden">
         {list.map((item) => (
-          <button
-            id={item.id}
-            key={item.id}
-            onClick={() => handleNavigate(item)}
-          >
-            <a href={item.link}>{item.name}</a>
+          <button key={item.id} onClick={() => handleNavigate(item)}>
+            <a>{item.name}</a>
           </button>
         ))}
       </div>
