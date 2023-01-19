@@ -36,4 +36,5 @@ export const Images = {
   WORKING: require("./lotties/working.json"),
   MOVIE_STREAMING: require("./images/moviestreaming.jpg"),
   FOOD_HUB: require("./images/foodhub.png"),
+  NFT_MARKET: require("./images/nftmarket.png"),
 };

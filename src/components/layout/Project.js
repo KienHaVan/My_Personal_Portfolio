@@ -18,7 +18,7 @@ const projectList = [
     id: 2,
     name: "NFT Market Website",
     description: "",
-    image: Images.AVATAR,
+    image: Images.NFT_MARKET,
     link: "",
   },
   {

@@ -18,7 +18,7 @@ function Contact({ section }) {
             src={Images.AVATAR}
             className="w-[200px] h-[200px] rounded-full mb-4"
           />
-          <h1 className="text-2xl font-bold">Ha Van Kien (Kevin Tech)</h1>
+          <h1 className="text-2xl font-bold">Ha Van Kien (Kevin)</h1>
           <h2 className="text-xl font-bold mb-4">Software Developer</h2>
           <p className="text-2xl font-bold">Contact for work</p>
           <p>Phone: (+84) 328.728.623</p>
