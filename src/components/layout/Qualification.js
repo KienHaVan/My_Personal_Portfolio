@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Images } from "../../assets";
 import QualificationItem from "../Qualification/QualificationItem";
+import Lottie from "react-lottie-player";
 
 const educationList = [
   {
@@ -64,14 +65,13 @@ function Qualification({ section }) {
           className="flex justify-center items-center gap-1 cursor-pointer"
           onClick={() => setSelect("education")}
         >
-          <img
-            src={
-              select === "education"
-                ? Images.EDUCATION_CHOOSE
-                : Images.EDUCATION
+          <Lottie
+            loop
+            animationData={
+              select === "education" ? Images.EDU_ACTIVE : Images.EDU
             }
-            className="w-6"
-            alt=""
+            play
+            style={{ height: 24, width: 24 }}
           />
           <p className={`${select === "education" ? "text-blue-500" : null}`}>
             Education
@@ -81,10 +81,11 @@ function Qualification({ section }) {
           className="flex justify-center items-center gap-1 cursor-pointer"
           onClick={() => setSelect("work")}
         >
-          <img
-            src={select === "work" ? Images.WORK_CHOOSE : Images.WORK}
-            className="w-6"
-            alt=""
+          <Lottie
+            loop
+            animationData={select === "work" ? Images.CODING : Images.WORKING}
+            play
+            style={{ height: 24, width: 24 }}
           />
           <p className={`${select === "work" ? "text-blue-500" : null}`}>
             Work

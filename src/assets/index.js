@@ -31,4 +31,7 @@ export const Images = {
   CODING: require("./lotties/coding.json"),
   BACKEND_ANIMATE: require("./lotties/backend_animate.json"),
   DESIGNING: require("./lotties/designing.json"),
+  EDU: require("./lotties/education.json"),
+  EDU_ACTIVE: require("./lotties/education_active.json"),
+  WORKING: require("./lotties/working.json"),
 };
