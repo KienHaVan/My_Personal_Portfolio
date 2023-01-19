@@ -36,7 +36,7 @@ const skillList = {
       rate: 90,
     },
     {
-      name: "Pythong",
+      name: "Python",
       rate: 55,
     },
   ],
@@ -68,32 +68,46 @@ function Skill({ section }) {
       <h2 className="text-xl mb-8 mobile:mb-6">My technical level</h2>
       <div className="w-full grid grid-cols-2 gap-8 tablet:grid-cols-1 mobile:grid-cols-1">
         <div>
-          <SkillSection onClick={() => setSkillSelected("frontend")} />
-          {skillSelected === "frontend" && (
-            <SkillDetail data={skillList.frontend} />
-          )}
+          <SkillSection
+            onClick={() => setSkillSelected("frontend")}
+            skillSelected={skillSelected}
+            item="frontend"
+          />
+          <SkillDetail
+            data={skillList.frontend}
+            skillSelected={skillSelected}
+            item="frontend"
+          />
         </div>
         <div>
           <SkillSection
-            icon={Images.BACKEND}
+            icon={Images.BACKEND_ANIMATE}
             title="Backend developer"
             content="More than 2 years"
             onClick={() => setSkillSelected("backend")}
+            skillSelected={skillSelected}
+            item="backend"
           />
-          {skillSelected === "backend" && (
-            <SkillDetail data={skillList.backend} />
-          )}
+          <SkillDetail
+            data={skillList.backend}
+            skillSelected={skillSelected}
+            item="backend"
+          />
         </div>
         <div className="-mt-4">
           <SkillSection
-            icon={Images.DESIGN}
+            icon={Images.DESIGNING}
             title="Designer"
             content="More than 5 years"
             onClick={() => setSkillSelected("design")}
+            skillSelected={skillSelected}
+            item="design"
           />
-          {skillSelected === "design" && (
-            <SkillDetail data={skillList.design} />
-          )}
+          <SkillDetail
+            data={skillList.design}
+            skillSelected={skillSelected}
+            item="design"
+          />
         </div>
       </div>
     </div>

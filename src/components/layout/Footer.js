@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div className="py-4 w-full text-center">
-      © 2022. All rights reserved by Kevin-Themes.
+      © 2023. All rights reserved by Kevin-Tech.
     </div>
   );
 }

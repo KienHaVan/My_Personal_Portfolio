@@ -39,14 +39,15 @@ function About({ section }) {
           </h2>
           <div className="flex items-center justify-between my-6 mobile:w-full mobile:my-3">
             <AboutSection />
-            <AboutSection figure="20+" content="Completed projects" />
-            <AboutSection figure="05+" content="Companies worked" />
+            <AboutSection figure={20} content="Completed projects" />
+            <AboutSection figure={5} content="Companies worked" />
           </div>
           <Button
             title="Download CV"
             icon={Images.DOWNLOADING}
             onClick={onButtonClick}
             size={30}
+            padding
           />
         </div>
       </div>

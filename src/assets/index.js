@@ -28,4 +28,7 @@ export const Images = {
   SENDING: require("./lotties/sending.json"),
   DOWNLOADING: require("./lotties/downloading.json"),
   VIEWING: require("./lotties/eyeing.json"),
+  CODING: require("./lotties/coding.json"),
+  BACKEND_ANIMATE: require("./lotties/backend_animate.json"),
+  DESIGNING: require("./lotties/designing.json"),
 };

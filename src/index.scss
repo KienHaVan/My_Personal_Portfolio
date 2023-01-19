@@ -34,7 +34,7 @@
     overflow: hidden;
   }
   .btn-primary {
-    @apply px-4 py-3 flex items-center justify-center gap-2 h-[60px] w-[200px] cursor-pointer bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    @apply pl-4 py-3 flex items-center justify-center gap-2 h-[60px] w-[200px] cursor-pointer bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
   }
   .banner-social-laptop {
     @apply flex-row -bottom-16 left-auto;

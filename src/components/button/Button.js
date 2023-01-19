@@ -7,15 +7,16 @@ function Button({
   icon = Images.SENDING,
   onClick = () => {},
   size = 60,
+  padding = false,
 }) {
   return (
-    <div className="btn-primary" onClick={onClick}>
-      <p>{title}</p>
+    <div className={`btn-primary ${padding ? "pr-4" : null}`} onClick={onClick}>
+      <p className="flex-shrink-0">{title}</p>
       <Lottie
         loop
         animationData={icon}
         play
-        style={{ width: size, height: size }}
+        style={{ height: size, width: size }}
       />
     </div>
   );
