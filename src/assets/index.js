@@ -34,4 +34,6 @@ export const Images = {
   EDU: require("./lotties/education.json"),
   EDU_ACTIVE: require("./lotties/education_active.json"),
   WORKING: require("./lotties/working.json"),
+  MOVIE_STREAMING: require("./images/moviestreaming.jpg"),
+  FOOD_HUB: require("./images/foodhub.png"),
 };

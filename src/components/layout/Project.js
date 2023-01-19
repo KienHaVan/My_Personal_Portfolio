@@ -4,6 +4,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Images } from "../../assets";
+
+const projectList = [
+  {
+    id: 1,
+    name: "Movies Streaming Website",
+    description: "",
+    image: Images.MOVIE_STREAMING,
+    link: "https://github.com/KienHaVan/c4eProject",
+  },
+  {
+    id: 2,
+    name: "NFT Market Website",
+    description: "",
+    image: Images.AVATAR,
+    link: "",
+  },
+  {
+    id: 3,
+    name: "Food Ordering Application",
+    description: "",
+    image: Images.FOOD_HUB,
+    link: "https://github.com/KienHaVan/Food_Hub",
+  },
+];
 
 function Project({ section }) {
   return (
@@ -21,15 +46,16 @@ function Project({ section }) {
           modules={[Navigation]}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>
-            <ProjectItem />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectItem />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectItem />
-          </SwiperSlide>
+          {projectList.map((project) => (
+            <SwiperSlide key={project.id}>
+              <ProjectItem
+                name={project.name}
+                description={project.description}
+                image={project.image}
+                link={project.link}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
