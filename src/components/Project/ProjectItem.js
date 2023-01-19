@@ -14,7 +14,7 @@ function ProjectItem() {
           typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text ever since the 1500s
         </h2>
-        <Button title="View Project" icon={Images.SHOW} />
+        <Button title="View Project" icon={Images.VIEWING} />
       </div>
       <div className="w-[50%] mobile:w-full">
         <img

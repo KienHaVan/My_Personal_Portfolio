@@ -61,7 +61,7 @@ function App() {
       <Snowfall color="#fff" snowflakeCount={500} />
       <Header list={list} />
       <div className="page-container">
-        <Banner section={list[0]} />
+        <Banner section={list[0]} contactItem={list[5]} />
         <About section={list[1]} />
         <Skill section={list[2]} />
         <Qualification section={list[3]} />

@@ -25,4 +25,7 @@ export const Images = {
   CALENDER: require("./icons/calender.png"),
   QUALIFICATION: require("./icons/qualification.png"),
   SHOW: require("./icons/show.png"),
+  SENDING: require("./lotties/sending.json"),
+  DOWNLOADING: require("./lotties/downloading.json"),
+  VIEWING: require("./lotties/eyeing.json"),
 };

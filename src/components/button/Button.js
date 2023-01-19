@@ -1,15 +1,26 @@
 import React from "react";
 import { Images } from "../../assets";
+import Lottie from "react-lottie";
 
 function Button({
   title = "Contact Me",
-  icon = Images.SEND,
+  icon = Images.SENDING,
   onClick = () => {},
+  size = 60,
 }) {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: icon,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <div className="btn-primary" onClick={onClick}>
-      <p>{title}</p>
-      <img src={icon} className="w-[24px] h-[24px]" alt="" />
+      <p className="flex-shrink-0">{title}</p>
+      {/* <img src={icon} className="w-[24px] h-[24px]" alt="" /> */}
+      <Lottie options={defaultOptions} height={size} width={size} />
     </div>
   );
 }

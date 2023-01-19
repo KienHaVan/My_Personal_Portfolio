@@ -26,12 +26,19 @@ export default function Header({ list }) {
   return (
     <div className="desktop:page-container desktop:px-0 py-5 px-4 w-full flex justify-between items-center fixed top-0 left-0 right-0 z-10 bg-black ">
       <div>
-        <h1 className="text-2xl">Kevin Tech</h1>
+        <h1
+          className="text-2xl cursor-pointer"
+          onClick={() => handleNavigate(list[0])}
+        >
+          Kevin Tech
+        </h1>
       </div>
       <div className="flex items-center gap-10 mobile:hidden">
         {list.map((item) => (
           <button key={item.id} onClick={() => handleNavigate(item)}>
-            <a>{item.name}</a>
+            <div className="border-b-2 border-b-transparent hover:border-b-blue-500">
+              {item.name}
+            </div>
           </button>
         ))}
       </div>
@@ -44,6 +51,7 @@ export default function Header({ list }) {
       <Modal
         isOpen={modalOpen}
         onRequestClose={closeModal}
+        ariaHideApp={false}
         contentLabel="Example Modal"
         className="absolute top-0 left-0 bottom-0 right-0 transition-all z-20"
       >

@@ -44,8 +44,9 @@ function About({ section }) {
           </div>
           <Button
             title="Download CV"
-            icon={Images.DOWNLOAD}
+            icon={Images.DOWNLOADING}
             onClick={onButtonClick}
+            size={30}
           />
         </div>
       </div>

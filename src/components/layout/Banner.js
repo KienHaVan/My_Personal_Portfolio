@@ -15,18 +15,27 @@ export const social = [
   },
   {
     id: 3,
-    link: "/",
+    link: "https://www.linkedin.com/in/kienhv35/",
     image: Images.LINKEDIN,
   },
   {
     id: 4,
-    link: "/",
+    link: "https://github.com/KienHaVan",
     image: Images.GITHUB,
   },
 ];
 
-function Banner({ section }) {
-  console.log("🚀 ~ file: Banner.js:29 ~ Banner ~ section", section);
+function Banner({ section, contactItem }) {
+  const handleNavigate = (section) => {
+    let el = section.ref.current;
+
+    window.scrollTo({
+      behavior: "smooth",
+      left: 0,
+      top: el.offsetTop,
+    });
+  };
+
   return (
     <div
       className="pt-[132px] flex mobile:flex-col-reverse justify-center items-center relative tablet:mt-12 gap-6 mobile:pt-[96px]"
@@ -40,7 +49,7 @@ function Banner({ section }) {
           High level experience in mobile and web design and development
           knowledge, producting quality work.
         </h2>
-        <Button />
+        <Button onClick={() => handleNavigate(contactItem)} />
       </div>
       <div>
         <img
