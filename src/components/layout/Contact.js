@@ -3,6 +3,16 @@ import { Images } from "../../assets";
 import { social } from "./Banner";
 
 function Contact({ section }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      name: e?.target[0].value,
+      phone: e?.target[1].value,
+      mail: e?.target[2].value,
+      subject: e?.target[3].value,
+      message: e?.target[4].value,
+    };
+  };
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[80px] mb-20 tablet:px-0 mobile:px-0"
@@ -36,7 +46,7 @@ function Contact({ section }) {
             ))}
           </div>
         </div>
-        <form className="w-[50%] mobile:w-full">
+        <form className="w-[50%] mobile:w-full" onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold mb-4 invisible mobile:visible">
             Leave me a message
           </h1>
@@ -87,7 +97,9 @@ function Contact({ section }) {
               className="w-full mt-2 outline-none border-none text-black px-3 py-2 rounded-sm h-[200px]"
             />
           </div>
-          <button className="btn-primary w-full">SEND MESSAGE</button>
+          <button className="btn-primary w-full" type="submit">
+            SEND MESSAGE
+          </button>
         </form>
       </div>
     </div>
