@@ -5,7 +5,7 @@ import Button from '../button/Button';
 
 function About({ section }) {
   const onButtonClick = () => {
-    fetch('Kevin_SoftwareDeveloper.pdf').then((response) => {
+    fetch('myCV.pdf').then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');
