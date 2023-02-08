@@ -26,7 +26,7 @@ function About({ section }) {
       <div className="flex justify-evenly items-center w-full tablet:gap-4 mobile:about-mobile">
         <div className="flex-shrink-0">
           <img
-            src={Images.AVATAR}
+            src={Images.AVATAR4}
             className="rounded-full w-[300px] flex-shrink-0 mobile:w-[240px]"
             alt=""
           />

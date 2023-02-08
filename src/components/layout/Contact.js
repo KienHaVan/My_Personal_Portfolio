@@ -37,11 +37,7 @@ function Contact({ section }) {
       <h2 className="text-xl mb-12 mobile:mb-6">Contact me directly</h2>
       <div className="flex justify-between items-center w-full mobile:flex-col">
         <div className="w-[50%] flex flex-col items-center mobile:w-full">
-          <img
-            alt=""
-            src={Images.AVATAR}
-            className="w-[200px] h-[200px] rounded-full mb-4"
-          />
+          <img alt="" src={Images.CONTACT} className="w-[50%] mb-4" />
           <h1 className="text-2xl font-bold">Ha Van Kien (Kevin)</h1>
           <h2 className="text-xl font-bold mb-4">Software Developer</h2>
           <p className="text-2xl font-bold">Contact for work</p>
