@@ -1,11 +1,11 @@
-import React from "react";
-import { Images } from "../../assets";
-import Lottie from "react-lottie-player";
+import React from 'react';
+import { Images } from '../../assets';
+import Lottie from 'react-lottie-player';
 
 function SkillSection({
   icon = Images.CODING,
-  title = "Frontend developer",
-  content = "More then 4 years",
+  title = 'Frontend developer',
+  content = 'More than 1 years',
   onClick = () => {},
   skillSelected,
   item,
@@ -29,7 +29,7 @@ function SkillSection({
         src={Images.DOWN}
         className={`w-6 ${
           item === skillSelected
-            ? "rotate-180 transition-all duration-300"
+            ? 'rotate-180 transition-all duration-300'
             : null
         }`}
         alt=""

@@ -1,16 +1,16 @@
-import React, { useRef } from "react";
-import { Images } from "../../assets";
-import AboutSection from "../About/AboutSection";
-import Button from "../button/Button";
+import React, { useRef } from 'react';
+import { Images } from '../../assets';
+import AboutSection from '../About/AboutSection';
+import Button from '../button/Button';
 
 function About({ section }) {
   const onButtonClick = () => {
-    fetch("Kevin_SoftwareDeveloper.pdf").then((response) => {
+    fetch('Kevin_SoftwareDeveloper.pdf').then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement("a");
+        let alink = document.createElement('a');
         alink.href = fileURL;
-        alink.download = "Kevin_SoftwareDeveloper.pdf";
+        alink.download = 'Kevin_SoftwareDeveloper.pdf';
         alink.click();
       });
     });
@@ -39,8 +39,8 @@ function About({ section }) {
           </h2>
           <div className="flex items-center justify-between my-6 mobile:w-full mobile:my-3">
             <AboutSection />
-            <AboutSection figure={20} content="Completed projects" />
-            <AboutSection figure={5} content="Companies worked" />
+            <AboutSection figure={3} content="Completed projects" />
+            <AboutSection figure={1} content="Companies worked" />
           </div>
           <Button
             title="Download CV"

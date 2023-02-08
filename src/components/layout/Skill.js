@@ -1,63 +1,63 @@
-import React, { useState } from "react";
-import { Images } from "../../assets";
-import SkillDetail from "../Skill/SkillDetail";
-import SkillSection from "../Skill/SkillSection";
+import React, { useState } from 'react';
+import { Images } from '../../assets';
+import SkillDetail from '../Skill/SkillDetail';
+import SkillSection from '../Skill/SkillSection';
 
 const skillList = {
   frontend: [
     {
-      name: "HTML",
+      name: 'HTML',
       rate: 90,
     },
     {
-      name: "CSS",
+      name: 'CSS',
       rate: 80,
     },
     {
-      name: "Javascript",
+      name: 'Javascript',
       rate: 60,
     },
     {
-      name: "React",
+      name: 'React',
       rate: 85,
     },
   ],
   backend: [
     {
-      name: "PHP",
-      rate: 80,
-    },
-    {
-      name: "Node Js",
-      rate: 70,
-    },
-    {
-      name: "Firebase",
+      name: 'Firebase',
       rate: 90,
     },
     {
-      name: "Python",
+      name: 'MongoDB',
+      rate: 80,
+    },
+    {
+      name: 'GraphQL',
+      rate: 70,
+    },
+    {
+      name: 'Python',
       rate: 55,
     },
   ],
   design: [
     {
-      name: "Figma",
+      name: 'Figma',
       rate: 90,
     },
+    // {
+    //   name: "Sketch",
+    //   rate: 85,
+    // },
     {
-      name: "Sketch",
-      rate: 85,
-    },
-    {
-      name: "Photoshop",
+      name: 'Photoshop',
       rate: 85,
     },
   ],
 };
 
 function Skill({ section }) {
-  const [skillSelected, setSkillSelected] = useState("frontend");
+  const [skillSelected, setSkillSelected] = useState('frontend');
   return (
     <div
       className="pt-[100px] flex flex-col justify-center items-center px-[160px] laptop:px-24 tablet:px-12 mobile:px-0"
@@ -69,7 +69,7 @@ function Skill({ section }) {
       <div className="w-full grid grid-cols-2 gap-8 tablet:grid-cols-1 mobile:grid-cols-1">
         <div>
           <SkillSection
-            onClick={() => setSkillSelected("frontend")}
+            onClick={() => setSkillSelected('frontend')}
             skillSelected={skillSelected}
             item="frontend"
           />
@@ -82,9 +82,9 @@ function Skill({ section }) {
         <div>
           <SkillSection
             icon={Images.BACKEND_ANIMATE}
-            title="Backend developer"
-            content="More than 2 years"
-            onClick={() => setSkillSelected("backend")}
+            title="Database & Others"
+            content="More than 1 years"
+            onClick={() => setSkillSelected('backend')}
             skillSelected={skillSelected}
             item="backend"
           />
@@ -97,9 +97,9 @@ function Skill({ section }) {
         <div className="-mt-4">
           <SkillSection
             icon={Images.DESIGNING}
-            title="Designer"
-            content="More than 5 years"
-            onClick={() => setSkillSelected("design")}
+            title="Designer Platform"
+            content="More than 1 years"
+            onClick={() => setSkillSelected('design')}
             skillSelected={skillSelected}
             item="design"
           />

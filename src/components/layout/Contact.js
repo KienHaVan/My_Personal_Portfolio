@@ -1,17 +1,31 @@
-import React from "react";
-import { Images } from "../../assets";
-import { social } from "./Banner";
+import React, { useRef, useState } from 'react';
+import { Images } from '../../assets';
+import { social } from './Banner';
+import emailjs from '@emailjs/browser';
 
 function Contact({ section }) {
+  const form = useRef();
+  const [status, setStatus] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      name: e?.target[0].value,
-      phone: e?.target[1].value,
-      mail: e?.target[2].value,
-      subject: e?.target[3].value,
-      message: e?.target[4].value,
-    };
+    emailjs
+      .sendForm(
+        'service_rztss0e',
+        'template_zrpsx4q',
+        form.current,
+        'eHZhBp0gj17n7HQfG'
+      )
+      .then(
+        (result) => {
+          console.log('success: ', result.text);
+          setStatus(true);
+          e.target.reset();
+        },
+        (error) => {
+          console.log('error: ', error.text);
+          setStatus(false);
+        }
+      );
   };
   return (
     <div
@@ -46,7 +60,11 @@ function Contact({ section }) {
             ))}
           </div>
         </div>
-        <form className="w-[50%] mobile:w-full" onSubmit={handleSubmit}>
+        <form
+          className="w-[50%] mobile:w-full"
+          onSubmit={handleSubmit}
+          ref={form}
+        >
           <h1 className="text-2xl font-bold mb-4 invisible mobile:visible">
             Leave me a message
           </h1>
@@ -63,7 +81,7 @@ function Contact({ section }) {
             <div className="w-full">
               <label htmlFor="phone">Phone number</label>
               <input
-                type="text"
+                type="number"
                 id="phone"
                 name="phone"
                 className="w-full mt-2 outline-none border-none text-black px-3 py-2 rounded-sm"
@@ -73,7 +91,7 @@ function Contact({ section }) {
           <div className="mb-4">
             <label htmlFor="mail">Your email</label>
             <input
-              type="text"
+              type="email"
               id="mail"
               name="mail"
               className="w-full mt-2 outline-none border-none text-black px-3 py-2 rounded-sm"
@@ -100,6 +118,15 @@ function Contact({ section }) {
           <button className="btn-primary w-full" type="submit">
             SEND MESSAGE
           </button>
+          {status !== null && status === true ? (
+            <p className="mt-4 text-center text-green-400">
+              I have recieved your message!
+            </p>
+          ) : status !== null && status === false ? (
+            <p className="mt-4 text-center text-red-400">
+              Oop! Something went wrong!
+            </p>
+          ) : null}
         </form>
       </div>
     </div>

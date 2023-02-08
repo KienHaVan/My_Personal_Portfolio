@@ -1,7 +1,7 @@
-import React from "react";
-import CountUp from "react-countup";
+import React from 'react';
+import CountUp from 'react-countup';
 
-function AboutSection({ figure = 8, content = "Years Experience" }) {
+function AboutSection({ figure = 1, content = 'Years Experience' }) {
   return (
     <div className="flex flex-col items-center justify-center w-[100px]">
       <h2 className="text-2xl font-bold">

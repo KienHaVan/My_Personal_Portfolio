@@ -1,26 +1,26 @@
-import React from "react";
-import { Images } from "../../assets";
-import Button from "../button/Button";
+import React from 'react';
+import { Images } from '../../assets';
+import Button from '../button/Button';
 
 export const social = [
   {
     id: 1,
-    link: "https://www.facebook.com/kien.van321",
+    link: 'https://www.facebook.com/kien.van321',
     image: Images.FACEBOOK,
   },
   {
     id: 2,
-    link: "/",
+    link: '/',
     image: Images.YOUTUBE,
   },
   {
     id: 3,
-    link: "https://www.linkedin.com/in/kienhv35/",
+    link: 'https://www.linkedin.com/in/kienhv35/',
     image: Images.LINKEDIN,
   },
   {
     id: 4,
-    link: "https://github.com/KienHaVan",
+    link: 'https://github.com/KienHaVan',
     image: Images.GITHUB,
   },
 ];
@@ -30,7 +30,7 @@ function Banner({ section, contactItem }) {
     let el = section.ref.current;
 
     window.scrollTo({
-      behavior: "smooth",
+      behavior: 'smooth',
       left: 0,
       top: el.offsetTop,
     });
@@ -44,7 +44,7 @@ function Banner({ section, contactItem }) {
     >
       <div className="w-[500px] mobile:w-auto flex flex-col gap-4">
         <h1 className="text-5xl font-bold">Hi, I'm Kevin</h1>
-        <h2 className="text-xl font-bold">Software developer & Youtuber</h2>
+        <h2 className="text-xl font-bold">Software developer</h2>
         <h2 className="mb-8">
           High level experience in mobile and web design and development
           knowledge, producting quality work.
