@@ -18,7 +18,7 @@ const skillList = {
       rate: 60,
     },
     {
-      name: 'React',
+      name: 'Typescript',
       rate: 85,
     },
   ],
